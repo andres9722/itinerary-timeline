@@ -5,11 +5,7 @@ import colors from '../styles/colors'
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
-    title: 'Home',
-    headerStyle: {
-      backgroundColor: colors.darkBlue,
-    },
-    headerTintColor: colors.white,
+    title: 'Home'
   }
   render () {
     return (

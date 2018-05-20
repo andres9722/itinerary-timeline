@@ -1,26 +1,34 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, ScrollView } from 'react-native'
 
-import TimeBox from '../components/TimeBox'
+import GroundSegment from '../components/segments/GroundSegment'
 
 import colors from '../styles/colors'
 
 export default class OverviewScreen extends React.Component {
   static navigationOptions = {
-    title: 'Overview',
-    headerStyle: {
-      backgroundColor: colors.darkBlue,
-    },
-    headerTintColor: colors.white,
+    title: 'Overview'
+  }
+  constructor (props) {
+    super(props)
+    this.state = {
+      segments: [
+        {
+          segment_id: "452dfb51-0ac6-4274-b740-af6f89bc6116",
+          time: '07:20',
+          active: true
+        }
+      ]
+    }
   }
   render () {
     return (
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         <Text style={styles.header}>Berlin - München</Text>
-        <TimeBox text='07:20' active={true} />
-        <TimeBox text='08:00' />
-        <TimeBox text='08:40' />
-      </View>
+        {this.state.segments.map(segment => {
+          return <GroundSegment key={segment.segment_id} {...segment}/>
+        })}
+      </ScrollView>
     )
   }
 }
@@ -28,12 +36,12 @@ export default class OverviewScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.lightGray,
+    backgroundColor: colors.lightGray
   },
   header: {
     textAlign: 'center',
     fontSize: 30,
     color: colors.white,
-    padding: 20,
+    padding: 20
   }
 })
