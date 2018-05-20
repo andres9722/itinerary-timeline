@@ -10,10 +10,10 @@ import metrics from '../../styles/metrics'
 
 export default class Segment extends React.PureComponent {
   render () {
-    const {children, time, active} = this.props
+    const {children, text, active} = this.props
     return (
       <View>
-        <TimeBox text={time} active={active} />
+        <TimeBox text={text} active={active} />
         <GenericSegment>
           <GroundCard />
         </GenericSegment>
