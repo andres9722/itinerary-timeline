@@ -23,7 +23,6 @@ const styles = StyleSheet.create({
     width: '100%',
     flexDirection: 'row',
     alignItems: 'center',
-    // marginLeft: metrics.baseMargin
   },
   dot: {
     height: 20,

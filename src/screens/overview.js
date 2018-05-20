@@ -27,10 +27,11 @@ export default class OverviewScreen extends React.Component {
     this.state = data
   }
   render () {
+    const { origin_iata, destination_iata, segments} = this.state
     return (
       <ScrollView style={styles.container}>
-        <Text style={styles.header}>{this.state.origin_iata} - {this.state.destination_iata}</Text>
-        {this.state.segments.map(segment => {
+        <Text style={styles.header}>{origin_iata} - {destination_iata}</Text>
+        {segments.map(segment => {
           const SegmentComponent = getSegmentComponent(segment.type)
           return <SegmentComponent
             key={segment.segment_id}
