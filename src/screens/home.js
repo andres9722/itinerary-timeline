@@ -1,9 +1,15 @@
 import React from 'react'
 import { StyleSheet, View, Button } from 'react-native'
 
+import colors from '../styles/colors'
+
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
-    title: 'Home'
+    title: 'Home',
+    headerStyle: {
+      backgroundColor: colors.darkBlue,
+    },
+    headerTintColor: colors.white,
   }
   render () {
     return (
@@ -20,7 +26,7 @@ export default class HomeScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: colors.lightGray,
     alignItems: 'center',
     justifyContent: 'center'
   }
