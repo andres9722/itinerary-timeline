@@ -9,7 +9,12 @@ import metrics from '../../styles/metrics'
 
 export default class Segment extends React.PureComponent {
   render () {
-    const { departure, origin, destination, detail: { flight_number, gate, seat } } = this.props
+    const {
+      departure,
+      origin,
+      destination,
+      detail: { flight_number, gate, seat }
+    } = this.props
     return (
       <View>
         <TimeBox text={departure} />
@@ -40,7 +45,8 @@ const styles = StyleSheet.create({
     width: '100%',
     backgroundColor: colors.blue,
     borderWidth: 2,
-    borderColor: colors.white
+    borderColor: colors.white,
+    borderRadius: 5
   },
   text: {
     color: colors.white,

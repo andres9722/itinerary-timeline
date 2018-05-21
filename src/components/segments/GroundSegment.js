@@ -30,7 +30,8 @@ const styles = StyleSheet.create({
     width: '100%',
     backgroundColor: colors.blue,
     borderWidth: 2,
-    borderColor: colors.white
+    borderColor: colors.white,
+    borderRadius: 5
   },
   activeCard: {
     backgroundColor: colors.darkBlue

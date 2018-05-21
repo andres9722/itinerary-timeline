@@ -15,8 +15,12 @@ export default class Segment extends React.PureComponent {
         <TimeBox time={departure} />
         <GenericSegment>
           <View style={styles.card}>
-            <Text style={styles.text}>{origin.value} {origin.type}</Text>
-            <Text style={styles.text}>Terminal C - {detail.busyness_index}</Text>
+            <Text style={styles.text}>
+              {origin.value} {origin.type}
+            </Text>
+            <Text style={styles.text}>
+              Terminal C - {detail.busyness_index}
+            </Text>
           </View>
         </GenericSegment>
       </View>
@@ -30,7 +34,8 @@ const styles = StyleSheet.create({
     width: '100%',
     backgroundColor: colors.blue,
     borderWidth: 2,
-    borderColor: colors.white
+    borderColor: colors.white,
+    borderRadius: 5
   },
   text: {
     color: colors.white,
