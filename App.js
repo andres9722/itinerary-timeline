@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { Component, Fragment } from 'react'
+import { StatusBar } from 'react-native'
 import { createStackNavigator } from 'react-navigation'
 
 import HomeScreen from './src/screens/Home'
@@ -20,8 +21,16 @@ const RootStack = createStackNavigator(
   }
 )
 
-export default class App extends React.Component {
+export default class App extends Component {
   render () {
-    return <RootStack />
+    return (
+      <Fragment>
+        <StatusBar
+          backgroundColor="blue"
+          barStyle="light-content"
+        />
+        <RootStack />
+      </Fragment>
+    )
   }
 }
