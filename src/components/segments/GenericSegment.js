@@ -6,12 +6,8 @@ import metrics from '../../styles/metrics'
 
 export default class Segment extends React.PureComponent {
   render () {
-    const {children} = this.props
-    return (
-      <View style={styles.container}>
-        {children}
-      </View>
-    )
+    const { children } = this.props
+    return <View style={styles.container}>{children}</View>
   }
 }
 

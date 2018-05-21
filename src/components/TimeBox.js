@@ -1,17 +1,18 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
+import moment from 'moment'
 
 import colors from '../styles/colors'
 import metrics from '../styles/metrics'
 
 export default class TimeBox extends React.PureComponent {
   render () {
-    const { text, active } = this.props
+    const { time, active } = this.props
     const activeStyle = active ? { backgroundColor: colors.white } : {}
     return (
       <View style={styles.container}>
         <View style={[styles.dot, activeStyle]} />
-        <Text style={styles.text}>{text}</Text>
+        <Text style={styles.text}>{moment(time).format('h:mm:ss')}</Text>
       </View>
     )
   }
@@ -22,7 +23,7 @@ const styles = StyleSheet.create({
     height: 40,
     width: '100%',
     flexDirection: 'row',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   dot: {
     height: 20,

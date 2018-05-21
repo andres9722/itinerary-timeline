@@ -1,6 +1,5 @@
 import React from 'react'
 import { StyleSheet, Text, View, ScrollView } from 'react-native'
-import moment from 'moment'
 
 import GroundSegment from '../components/segments/GroundSegment'
 import AirportSegment from '../components/segments/AirportSegment'
@@ -11,9 +10,9 @@ import colors from '../styles/colors'
 import data from '../../data.json'
 
 const SEGMENT_TYPES = {
-  'GROUND': GroundSegment,
-  'AIRPORT': AirportSegment,
-  'FLIGHT': FlightSegment
+  GROUND: GroundSegment,
+  AIRPORT: AirportSegment,
+  FLIGHT: FlightSegment
 }
 
 const getSegmentComponent = segment => SEGMENT_TYPES[segment]
@@ -27,16 +26,21 @@ export default class OverviewScreen extends React.Component {
     this.state = data
   }
   render () {
-    const { origin_iata, destination_iata, segments} = this.state
+    const { origin_iata, destination_iata, segments } = this.state
     return (
       <ScrollView style={styles.container}>
-        <Text style={styles.header}>{origin_iata} - {destination_iata}</Text>
-        {segments.map(segment => {
+        <Text style={styles.header}>
+          {origin_iata} - {destination_iata}
+        </Text>
+        {segments.map((segment, index) => {
           const SegmentComponent = getSegmentComponent(segment.type)
-          return <SegmentComponent
-            key={segment.segment_id}
-            text={moment(segment.departure).format('h:mm:ss')}
-          />
+          return (
+            <SegmentComponent
+              key={segment.segment_id}
+              active={index === 0}
+              {...segment}
+            />
+          )
         })}
       </ScrollView>
     )
