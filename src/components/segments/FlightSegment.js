@@ -31,7 +31,9 @@ export default class Segment extends React.PureComponent {
             <View style={styles.footer}>
               <Text style={styles.text}>Gate {gate}</Text>
               <Text style={styles.text}>Seat {seat}</Text>
-              <Text style={styles.badge}>On Time</Text>
+              <View style={styles.badge}>
+                <Text style={styles.badgeText}>On Time</Text>
+              </View>
             </View>
           </View>
         </GenericSegment>
@@ -54,6 +56,13 @@ const styles = StyleSheet.create({
   },
   badge: {
     backgroundColor: colors.green,
+    borderRadius: 5,
+    paddingVertical: 5,
+    paddingHorizontal: 10,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  badgeText: {
     color: colors.white
   },
   header: {
