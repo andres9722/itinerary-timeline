@@ -13,7 +13,8 @@ export default class Segment extends React.PureComponent {
 
 const styles = StyleSheet.create({
   container: {
-    padding: 20,
+    paddingVertical: 10,
+    paddingHorizontal: 20,
     marginLeft: 20,
     borderColor: colors.white,
     borderLeftWidth: 2
