@@ -5,11 +5,11 @@ import {
   GroundSegment,
   AirportSegment,
   FlightSegment
-} from '../components/segments'
+} from '../../components/segments'
 
-import { colors } from '../styles'
+import { colors } from '../../styles'
 
-import data from '../../data.json'
+import data from '../../../data.json'
 
 const SEGMENT_TYPES = {
   GROUND: GroundSegment,

@@ -1,2 +1,2 @@
-export { default as HomeScreen } from './HomeScreen'
-export { default as OverviewScreen } from './OverviewScreen'
+export { default as HomeScreen } from './HomeScreen/HomeScreen'
+export { default as OverviewScreen } from './OverviewScreen/OverviewScreen'
