@@ -48,10 +48,12 @@ class OverviewScreen extends React.Component {
           })}
         </ScrollView>
       )
-    } else{
-      return <View style={styles.loadingContainer}>
-        <Text style={styles.loadingText}>Loading...</Text>
-      </View>
+    } else {
+      return (
+        <View style={styles.loadingContainer}>
+          <Text style={styles.loadingText}>Loading...</Text>
+        </View>
+      )
     }
   }
 }
