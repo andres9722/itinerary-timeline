@@ -1,8 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
-import colors from '../../styles/colors'
-import metrics from '../../styles/metrics'
+import { colors, metrics } from '../../styles'
 
 export default class Segment extends React.PureComponent {
   render () {

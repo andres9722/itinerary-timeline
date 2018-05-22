@@ -4,8 +4,7 @@ import { Text, View, StyleSheet } from 'react-native'
 import TimeBox from '../TimeBox'
 import GenericSegment from './GenericSegment'
 
-import colors from '../../styles/colors'
-import metrics from '../../styles/metrics'
+import { colors, metrics } from '../../styles'
 
 export default class Segment extends React.PureComponent {
   render () {

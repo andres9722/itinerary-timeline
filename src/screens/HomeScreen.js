@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyleSheet, View, Button } from 'react-native'
 
-import colors from '../styles/colors'
+import { colors } from '../styles'
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {

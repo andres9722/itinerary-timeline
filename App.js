@@ -2,10 +2,9 @@ import React, { Component, Fragment } from 'react'
 import { StatusBar } from 'react-native'
 import { createStackNavigator } from 'react-navigation'
 
-import HomeScreen from './src/screens/HomeScreen'
-import OverviewScreen from './src/screens/OverviewScreen'
+import { HomeScreen, OverviewScreen } from './src/screens'
 
-import colors from './src/styles/colors'
+import { colors } from './src/styles'
 
 const RootStack = createStackNavigator(
   {

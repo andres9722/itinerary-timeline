@@ -1,11 +1,13 @@
 import React from 'react'
 import { StyleSheet, Text, View, ScrollView } from 'react-native'
 
-import GroundSegment from '../components/segments/GroundSegment'
-import AirportSegment from '../components/segments/AirportSegment'
-import FlightSegment from '../components/segments/FlightSegment'
+import {
+  GroundSegment,
+  AirportSegment,
+  FlightSegment
+} from '../components/segments'
 
-import colors from '../styles/colors'
+import { colors } from '../styles'
 
 import data from '../../data.json'
 
